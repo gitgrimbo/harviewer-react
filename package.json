@@ -1,0 +1,61 @@
+{
+  "name": "harviewer-react",
+  "version": "1.0.0",
+  "description": "HAR Viewer built using React",
+  "main": "index.js",
+  "scripts": {
+    "deploy-gh-pages": "node deploy/deploy.js",
+    "lint": "eslint ./webapp",
+    "start": "webpack-dev-server --inline --hot --compress --content-base ./",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "webapp-build": "webpack --progress --colors --config webpack.config.prod.js",
+    "webapp-build-prod": "npm run webapp-build -- -p"
+  },
+  "author": {
+    "name": "gitgrimbo",
+    "email": "gitgrimbo@gmail.com",
+    "url": "https://github.com/gitgrimbo"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gitgrimbo/harviewer-react.git"
+  },
+  "bugs": "https://github.com/gitgrimbo/harviewer-react/issues",
+  "license": "MIT",
+  "devDependencies": {
+    "amdi18n-loader": "^0.4.0",
+    "babel-core": "^6.17.0",
+    "babel-loader": "^6.2.5",
+    "babel-plugin-transform-object-assign": "^6.8.0",
+    "babel-plugin-transform-object-rest-spread": "^6.16.0",
+    "babel-plugin-transform-runtime": "^6.15.0",
+    "babel-preset-es2015": "^6.16.0",
+    "babel-preset-react": "^6.16.0",
+    "bundle-loader": "^0.5.4",
+    "css-loader": "^0.25.0",
+    "esformatter": "^0.9.6",
+    "esformatter-jsx": "^7.0.1",
+    "eslint": "^3.7.1",
+    "eslint-config-google": "^0.6.0",
+    "eslint-plugin-react": "^6.4.1",
+    "file-loader": "^0.9.0",
+    "git-revision-webpack-plugin": "^2.4.0",
+    "js-cookie": "^2.1.3",
+    "raw-loader": "^0.5.1",
+    "react-addons-perf": "^15.3.2",
+    "shelljs": "^0.7.4",
+    "style-loader": "^0.13.1",
+    "urijs": "^1.18.2",
+    "url-loader": "^0.5.7",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2"
+  },
+  "dependencies": {
+    "file-saver": "^1.3.3",
+    "jquery": "^3.1.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-router": "^2.8.1",
+    "valuelink": "^1.3.10"
+  }
+}
