@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>HTTP Archive Viewer @VERSION@</title>
+    <link rel="stylesheet" href="css/harViewer.css" type="text/css">
+</head>
+
+<body class="harBody">
+    <div id="content" version="@VERSION@"></div>
+</body>
+
+<script src="../node_modules/jquery/dist/jquery.js"></script>
+<script src="highlightjs/highlight.min.js"></script>
+
+<script>
+var addScript = (function() {
+  var legacy =
+    (typeof Promise === "undefined") ||
+    (!("finally" in Promise.prototype));
+  return function(src) {
+    var parts = src.split(".js");
+    var src = parts[0] + (legacy ? ".legacy" : "") + ".js";
+    document.write('<script src="' + src + '"></scr' + 'ipt>');
+  };
+})();
+</script>
+
+<script>
+addScript("./dist/vendor.js");
+</script>
+<script>
+addScript("./dist/main.js");
+</script>
+
+</html>

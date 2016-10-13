@@ -1,0 +1,12 @@
+# Don't lint dist
+webapp/dist/**/*
+
+# Don't lint the old code yet
+webapp/har.js
+webapp/modules/**/nls/*
+webapp/modules/core/**/*
+webapp/modules/preview/harModel.js
+webapp/modules/preview/harModelLoader.js
+webapp/modules/preview/harSchema.js
+webapp/modules/preview/jsonSchema.js
+webapp/modules/preview/ref.js
