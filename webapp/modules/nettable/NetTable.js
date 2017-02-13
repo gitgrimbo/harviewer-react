@@ -209,7 +209,7 @@ const NetTable = React.createClass({
     const netRows = this.createNetRows(entries);
 
     return (
-      <table className="netTable" cellPadding="0" cellSpacing="0">
+      <table className="netTable" cellPadding="0" cellSpacing="0" data-name={page.title}>
         <tbody>
           <tr className="netSizerRow">
             <td className="netHrefCol netCol" width="20%"></td>
