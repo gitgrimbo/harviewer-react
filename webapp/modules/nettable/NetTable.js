@@ -140,21 +140,21 @@ const NetTable = React.createClass({
   },
 
   showInfoTip(infoTip, target, x, y, rangeParent, rangeOffset) {
-    const table = Dom.getAncestorByClass(target, 'netTable');
-    if (!table || table.getAttribute('data-name') !== this.props.page.title) {
+    const table = Dom.getAncestorByClass(target, "netTable");
+    if (!table || table.getAttribute("data-name") !== this.props.page.title) {
       return;
     }
 
-    const row = Dom.getAncestorByClass(target, 'netRow');
+    const row = Dom.getAncestorByClass(target, "netRow");
     if (row) {
-      if (Dom.getAncestorByClass(target, 'netBar')) {
+      if (Dom.getAncestorByClass(target, "netBar")) {
         // There is no background image for multiline tooltips.
-        const entryId = Number(row.getAttribute('data-entry-id') || '0');
+        const entryId = Number(row.getAttribute("data-entry-id") || "0");
         return {
           multiline: true,
           element: <TimeInfoTip entry={this.getEntries()[entryId]} page={this.props.page} />,
         };
-      } else if (Css.hasClass(target, 'netSizeLabel')) {
+      } else if (Css.hasClass(target, "netSizeLabel")) {
         return {
           multiline: false,
         };
